@@ -7,10 +7,16 @@ import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.powermock.modules.junit4.PowerMockRunner;
 
 import com.programacionweb.mockito.ManejarServicio;
 import com.programacionweb.mockito.ComponenteDependiente;
 
+//@RunWith(org.mockito.runners.MockitoJUnitRunner.class)
+@RunWith(PowerMockRunner.class)
 public class ComponenteDependienteTest {
 	@Test
 	public void testMockito() {
@@ -27,7 +33,7 @@ public class ComponenteDependienteTest {
 		List<String> alltd = business.getTodosforHibernate("dummy");
 
 		System.out.println(alltd);
-		assertEquals(1, alltd.size());
+		assertEquals(3, alltd.size());
 	}
 
 }
